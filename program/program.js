@@ -391,7 +391,7 @@ function nextCycle(lift){
         cycleBench++;
     }
     else if(lift === "squat"){
-        if(cyleSquat === 5){
+        if(cycleSquat === 5){
             Squat  = parseInt(Squat) - 30;
             cycleSquat = 0;
         }
@@ -408,7 +408,7 @@ function nextCycle(lift){
         cycleSquat++;
     }
     else if(lift === "deadlift"){
-        if(cyleDeadlift === 5){
+        if(cycleDeadlift === 5){
             Deadlift  = parseInt(Deadlift) - 30;
             cycleDeadlift = 0;
         }
