@@ -6,7 +6,7 @@ var OverheadPress = localStorage["OverheadPress"];
 var BarbellRow = localStorage["BarbellRow"];
 
 //Lifts
-var BenchWarmup = Bench * 0.4;
+var BenchWarmup = Bench * 0.25;
 var Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
 var Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
 var Bench531 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
@@ -14,7 +14,7 @@ var Bench531 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
 var cycleBench = 1;
 var counterBench = 0;
 
-var SquatWarmup = Squat * 0.4;
+var SquatWarmup = Squat * 0.25;
 var Squat555 = [Squat * 0.65, Squat * 0.75, Squat * 0.85];
 var Squat333 = [Squat * 0.7, Squat * 0.8, Squat * 0.9];
 var Squat531 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
@@ -22,7 +22,7 @@ var Squat531 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
 var cycleSquat = 1;
 var counterSquat = 0;
 
-var DeadliftWarmup = Deadlift * 0.4;
+var DeadliftWarmup = Deadlift * 0.25;
 var Deadlift555 = [Deadlift * 0.65, Deadlift * 0.75, Deadlift * 0.85];
 var Deadlift333 = [Deadlift * 0.7, Deadlift * 0.8, Deadlift * 0.9];
 var Deadlift531 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
@@ -30,7 +30,7 @@ var Deadlift531 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
 var cycleDeadlift = 1;
 var counterDeadlift = 0;
 
-var OverheadPressWarmup = OverheadPress * 0.4;
+var OverheadPressWarmup = OverheadPress * 0.25;
 var OverheadPress555 = [OverheadPress * 0.65, OverheadPress * 0.75, OverheadPress * 0.85];
 var OverheadPress333 = [OverheadPress * 0.7, OverheadPress * 0.8, OverheadPress * 0.9];
 var OverheadPress531 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPress * 0.95];
@@ -38,7 +38,7 @@ var OverheadPress531 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPres
 var cycleOHP = 1;
 var counterOverheadPress = 0;
 
-var BarbellRowWarmup = BarbellRow * 0.4;
+var BarbellRowWarmup = BarbellRow * 0.25;
 var BarbellRow555 = [BarbellRow * 0.65, BarbellRow * 0.75, BarbellRow * 0.85];
 var BarbellRow333 = [BarbellRow * 0.7, BarbellRow * 0.8, BarbellRow * 0.9];
 var BarbellRow531 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
@@ -149,7 +149,7 @@ function fillLifts(lift){
             result += "1x5   - ";
             result +=  round5(Bench531[0]).toString() + " lb";            
             nextCycle(lift);
-        }
+        } 
     }
     if(lift === "squat"){
         //warmup
@@ -378,7 +378,7 @@ function nextCycle(lift){
         else{
             Bench = parseInt(Bench) + 5;
         }        
-        BenchWarmup = Bench * 0.4;
+        BenchWarmup = Bench * 0.25;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
         Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
         Bench531 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
@@ -395,7 +395,7 @@ function nextCycle(lift){
             Squat = parseInt(Squat) + 10;
         }
     
-        SquatWarmup = Squat * 0.4;
+        SquatWarmup = Squat * 0.25;
         Squat555 = [Squat * 0.65, Squat * 0.75, Squat * 0.85];
         Squat333 = [Squat * 0.7, Squat * 0.8, Squat * 0.9];
         Squat531 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
@@ -412,7 +412,7 @@ function nextCycle(lift){
             Deadlift = parseInt(Deadlift) + 10;
         }
     
-        DeadliftWarmup = Deadlift * 0.4;
+        DeadliftWarmup = Deadlift * 0.25;
         Deadlift555 = [Deadlift * 0.65, Deadlift * 0.75, Deadlift * 0.85];
         Deadlift333 = [Deadlift * 0.7, Deadlift * 0.8, Deadlift * 0.9];
         Deadlift531 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
@@ -429,7 +429,7 @@ function nextCycle(lift){
             OverheadPress = parseInt(OverheadPress) + 5;
         }
     
-        OverheadPressWarmup = OverheadPress * 0.4;
+        OverheadPressWarmup = OverheadPress * 0.25;
         OverheadPress555 = [OverheadPress * 0.65, OverheadPress * 0.75, OverheadPress * 0.85];
         OverheadPress333 = [OverheadPress * 0.7, OverheadPress * 0.8, OverheadPress * 0.9];
         OverheadPress531 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPress * 0.95];
@@ -447,7 +447,7 @@ function nextCycle(lift){
             BarbellRow = parseInt(BarbellRow) + 5;
         }
     
-        BarbellRowWarmup = BarbellRow * 0.4;
+        BarbellRowWarmup = BarbellRow * 0.25;
         BarbellRow555 = [BarbellRow * 0.65, BarbellRow * 0.75, BarbellRow * 0.85];
         BarbellRow333 = [BarbellRow * 0.7, BarbellRow * 0.8, BarbellRow * 0.9];
         BarbellRow531 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
