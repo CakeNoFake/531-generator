@@ -380,6 +380,8 @@ function nextCycle(lift){
         else{
             Bench = parseInt(Bench) + 5;
         }
+        console.log(Bench);
+        
         BenchWarmup = Bench * 0.4;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
         Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
