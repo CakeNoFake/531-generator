@@ -374,13 +374,13 @@ function nextCycle(lift){
     if(lift === "bench"){
         console.log("COUNTER" + cycleBench);
         if(cycleBench === 5){
-            Bench  = parseInt(Bench) - 15;
+            Bench  = parseInt(Bench) - 10;
             cycleBench = 0;
         }
         else{
-            Bench = parseInt("BENCH" + Bench) + 5;
+            Bench = parseInt(Bench) + 5;
         }
-        console.log(Bench);
+        console.log("BENCH" + Bench); 
         
         BenchWarmup = Bench * 0.4;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
@@ -409,7 +409,7 @@ function nextCycle(lift){
     }
     else if(lift === "deadlift"){
         if(cycleDeadlift === 5){
-            Deadlift  = parseInt(Deadlift) - 30;
+            Deadlift  = parseInt(Deadlift) - 20;
             cycleDeadlift = 0;
         }
         else{
@@ -444,7 +444,7 @@ function nextCycle(lift){
     }
     else if(lift === "barbellRow"){
         if(cycleBBRow === 5){
-            BarbellRow  = parseInt(BarbellRow) - 15;
+            BarbellRow  = parseInt(BarbellRow) - 10;
             cycleBBRow = 0;
         }
         else{
