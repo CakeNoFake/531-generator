@@ -457,7 +457,7 @@ function nextCycle(lift){
         BarbellRow531 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
     
         counterBarbellRow = 0;
-        cycleBBrow++;
+        cycleBBRow++;
     }
 }
 
