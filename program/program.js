@@ -359,7 +359,6 @@ function fillLifts(lift){
             nextCycle(lift);
         }
     }
-
     return result;
 
 
