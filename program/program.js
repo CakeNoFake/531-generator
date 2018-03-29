@@ -437,7 +437,3 @@ function generateRandomAssist(type) {
 
     return exercice;
 }
-
-$(document).ready(function(){
-    fillData();
-});
