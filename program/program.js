@@ -372,16 +372,13 @@ function round5(x){
 function nextCycle(lift){
 
     if(lift === "bench"){
-        console.log("COUNTER" + cycleBench);
         if(cycleBench === 5){
             Bench  = parseInt(Bench) - 10;
             cycleBench = 0;
         }
         else{
             Bench = parseInt(Bench) + 5;
-        }
-        console.log("BENCH" + Bench); 
-        
+        }        
         BenchWarmup = Bench * 0.4;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
         Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
@@ -443,6 +440,7 @@ function nextCycle(lift){
 
     }
     else if(lift === "barbellRow"){
+         console.log("COUNTER_ROW" + cycleBBRow);
         if(cycleBBRow === 5){
             BarbellRow  = parseInt(BarbellRow) - 10;
             cycleBBRow = 0;
