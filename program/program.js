@@ -388,7 +388,7 @@ function nextCycle(lift){
     }
     else if(lift === "squat"){
         if(cycleSquat === 5){
-            Squat  = parseInt(Squat) - 30;
+            Squat  = parseInt(Squat) - 20;
             cycleSquat = 0;
         }
         else{
@@ -422,7 +422,7 @@ function nextCycle(lift){
     }
     else if(lift === "overheadPress"){
         if(cycleOHP === 5){
-            OverheadPress  = parseInt(OverheadPress) - 15;
+            OverheadPress  = parseInt(OverheadPress) - 10;
             cycleOHP = 0;
         }
         else{
