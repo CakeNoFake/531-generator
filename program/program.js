@@ -439,7 +439,6 @@ function nextCycle(lift){
 
     }
     else if(lift === "barbellRow"){
-         console.log("COUNTER_ROW" + cycleBBRow);
         if(cycleBBRow === 5){
             BarbellRow  = parseInt(BarbellRow) - 10;
             cycleBBRow = 0;
