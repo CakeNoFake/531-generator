@@ -368,6 +368,7 @@ function nextCycle(lift){
 
     if(lift === "bench"){
         Bench = parseInt(Bench) + 5;
+        console.log(Bench);
     
         BenchWarmup = Bench * 0.4;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
@@ -376,7 +377,7 @@ function nextCycle(lift){
     
         counterBench = 0;
     }
-    if(lift === "squat"){
+    else if(lift === "squat"){
         Squat = parseInt(Squat) + 10;
     
         SquatWarmup = Squat * 0.4;
@@ -387,7 +388,7 @@ function nextCycle(lift){
         counterSquat = 0;
 
     }
-    if(lift === "deadlift"){
+    else if(lift === "deadlift"){
         Deadlift = parseInt(Deadlift) + 10;
     
         DeadliftWarmup = Deadlift * 0.4;
@@ -397,7 +398,7 @@ function nextCycle(lift){
     
         counterDeadlift = 0;
     }
-    if(lift === "overheadPress"){
+    else if(lift === "overheadPress"){
         OverheadPress = parseInt(OverheadPress) + 5;
     
         OverheadPressWarmup = OverheadPress * 0.4;
@@ -408,7 +409,7 @@ function nextCycle(lift){
         counterOverheadPress = 0;
 
     }
-    if(lift === "barbellRow"){
+    else if(lift === "barbellRow"){
         BarbellRow = parseInt(BarbellRow) + 5;
     
         BarbellRowWarmup = BarbellRow * 0.4;
@@ -418,7 +419,6 @@ function nextCycle(lift){
     
         counterBarbellRow = 0;
     }
-
 }
 
 function generateRandomAssist(type) {
