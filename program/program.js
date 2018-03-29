@@ -11,6 +11,7 @@ var Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
 var Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
 var Bench531 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
 
+var cycleBench = 1;
 var counterBench = 0;
 
 var SquatWarmup = Squat * 0.4;
@@ -18,6 +19,7 @@ var Squat555 = [Squat * 0.65, Squat * 0.75, Squat * 0.85];
 var Squat333 = [Squat * 0.7, Squat * 0.8, Squat * 0.9];
 var Squat531 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
 
+var cycleSquat = 1;
 var counterSquat = 0;
 
 var DeadliftWarmup = Deadlift * 0.4;
@@ -25,6 +27,7 @@ var Deadlift555 = [Deadlift * 0.65, Deadlift * 0.75, Deadlift * 0.85];
 var Deadlift333 = [Deadlift * 0.7, Deadlift * 0.8, Deadlift * 0.9];
 var Deadlift531 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
 
+var cycleDeadlift = 1;
 var counterDeadlift = 0;
 
 var OverheadPressWarmup = OverheadPress * 0.4;
@@ -32,6 +35,7 @@ var OverheadPress555 = [OverheadPress * 0.65, OverheadPress * 0.75, OverheadPres
 var OverheadPress333 = [OverheadPress * 0.7, OverheadPress * 0.8, OverheadPress * 0.9];
 var OverheadPress531 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPress * 0.95];
 
+var cycleOHP = 1;
 var counterOverheadPress = 0;
 
 var BarbellRowWarmup = BarbellRow * 0.4;
@@ -39,6 +43,7 @@ var BarbellRow555 = [BarbellRow * 0.65, BarbellRow * 0.75, BarbellRow * 0.85];
 var BarbellRow333 = [BarbellRow * 0.7, BarbellRow * 0.8, BarbellRow * 0.9];
 var BarbellRow531 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
 
+var cycleBBRow = 1;
 var counterBarbellRow = 0;
 
 // Assistance options
@@ -367,18 +372,30 @@ function round5(x){
 function nextCycle(lift){
 
     if(lift === "bench"){
-        Bench = parseInt(Bench) + 5;
-        console.log(Bench);
-    
+        
+        if(cyleBench === 5){
+            Bench  = parseInt(Bench) - 15;
+            cycleBench = 0;
+        }
+        else{
+            Bench = parseInt(Bench) + 5;
+        }
         BenchWarmup = Bench * 0.4;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
         Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
         Bench531 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
     
         counterBench = 0;
+        cycleBench++;
     }
     else if(lift === "squat"){
-        Squat = parseInt(Squat) + 10;
+        if(cyleSquat === 5){
+            Squat  = parseInt(Squat) - 30;
+            cycleSquat = 0;
+        }
+        else{
+            Squat = parseInt(Squat) + 10;
+        }
     
         SquatWarmup = Squat * 0.4;
         Squat555 = [Squat * 0.65, Squat * 0.75, Squat * 0.85];
@@ -386,10 +403,16 @@ function nextCycle(lift){
         Squat531 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
     
         counterSquat = 0;
-
+        cycleSquat++;
     }
     else if(lift === "deadlift"){
-        Deadlift = parseInt(Deadlift) + 10;
+        if(cyleDeadlift === 5){
+            Deadlift  = parseInt(Deadlift) - 30;
+            cycleDeadlift = 0;
+        }
+        else{
+            Deadlift = parseInt(Deadlift) + 10;
+        }
     
         DeadliftWarmup = Deadlift * 0.4;
         Deadlift555 = [Deadlift * 0.65, Deadlift * 0.75, Deadlift * 0.85];
@@ -397,9 +420,16 @@ function nextCycle(lift){
         Deadlift531 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
     
         counterDeadlift = 0;
+        cycleDeadlift++;
     }
     else if(lift === "overheadPress"){
-        OverheadPress = parseInt(OverheadPress) + 5;
+        if(cycleOHP === 5){
+            OverheadPress  = parseInt(OverheadPress) - 15;
+            cycleOHP = 0;
+        }
+        else{
+            OverheadPress = parseInt(OverheadPress) + 5;
+        }
     
         OverheadPressWarmup = OverheadPress * 0.4;
         OverheadPress555 = [OverheadPress * 0.65, OverheadPress * 0.75, OverheadPress * 0.85];
@@ -407,10 +437,17 @@ function nextCycle(lift){
         OverheadPress531 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPress * 0.95];
     
         counterOverheadPress = 0;
+        cycleOHP++;
 
     }
     else if(lift === "barbellRow"){
-        BarbellRow = parseInt(BarbellRow) + 5;
+        if(cycleBBRow === 5){
+            BarbellRow  = parseInt(BarbellRow) - 15;
+            cycleBBRow = 0;
+        }
+        else{
+            BarbellRow = parseInt(BarbellRow) + 5;
+        }
     
         BarbellRowWarmup = BarbellRow * 0.4;
         BarbellRow555 = [BarbellRow * 0.65, BarbellRow * 0.75, BarbellRow * 0.85];
@@ -418,6 +455,7 @@ function nextCycle(lift){
         BarbellRow531 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
     
         counterBarbellRow = 0;
+        cycleBBrow++;
     }
 }
 
