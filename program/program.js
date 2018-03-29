@@ -372,13 +372,13 @@ function round5(x){
 function nextCycle(lift){
 
     if(lift === "bench"){
-        
-        if(cyleBench === 5){
+        console.log("COUNTER" + cycleBench);
+        if(cycleBench === 5){
             Bench  = parseInt(Bench) - 15;
             cycleBench = 0;
         }
         else{
-            Bench = parseInt(Bench) + 5;
+            Bench = parseInt("BENCH" + Bench) + 5;
         }
         console.log(Bench);
         
