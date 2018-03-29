@@ -373,7 +373,7 @@ function nextCycle(lift){
         BenchWarmup = Bench * 0.4;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
         Bench333 = [Bench * 0.7, Bench * 0.8, Bench * 0.9];
-        Bench555 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
+        Bench531 = [Bench * 0.75, Bench * 0.85, Bench * 0.95];
     
         counterBench = 0;
     }
@@ -383,7 +383,7 @@ function nextCycle(lift){
         SquatWarmup = Squat * 0.4;
         Squat555 = [Squat * 0.65, Squat * 0.75, Squat * 0.85];
         Squat333 = [Squat * 0.7, Squat * 0.8, Squat * 0.9];
-        Squat555 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
+        Squat531 = [Squat * 0.75, Squat * 0.85, Squat * 0.95];
     
         counterSquat = 0;
 
@@ -394,7 +394,7 @@ function nextCycle(lift){
         DeadliftWarmup = Deadlift * 0.4;
         Deadlift555 = [Deadlift * 0.65, Deadlift * 0.75, Deadlift * 0.85];
         Deadlift333 = [Deadlift * 0.7, Deadlift * 0.8, Deadlift * 0.9];
-        Deadlift555 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
+        Deadlift531 = [Deadlift * 0.75, Deadlift * 0.85, Deadlift * 0.95];
     
         counterDeadlift = 0;
     }
@@ -404,7 +404,7 @@ function nextCycle(lift){
         OverheadPressWarmup = OverheadPress * 0.4;
         OverheadPress555 = [OverheadPress * 0.65, OverheadPress * 0.75, OverheadPress * 0.85];
         OverheadPress333 = [OverheadPress * 0.7, OverheadPress * 0.8, OverheadPress * 0.9];
-        OverheadPress555 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPress * 0.95];
+        OverheadPress531 = [OverheadPress * 0.75, OverheadPress * 0.85, OverheadPress * 0.95];
     
         counterOverheadPress = 0;
 
@@ -415,7 +415,7 @@ function nextCycle(lift){
         BarbellRowWarmup = BarbellRow * 0.4;
         BarbellRow555 = [BarbellRow * 0.65, BarbellRow * 0.75, BarbellRow * 0.85];
         BarbellRow333 = [BarbellRow * 0.7, BarbellRow * 0.8, BarbellRow * 0.9];
-        BarbellRow555 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
+        BarbellRow531 = [BarbellRow * 0.75, BarbellRow * 0.85, BarbellRow * 0.95];
     
         counterBarbellRow = 0;
     }
