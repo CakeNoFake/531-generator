@@ -471,24 +471,25 @@ function nextCycle(lift){
 function generateRandomAssist(type) {
 
     var exercice = "";
-
+           
+    console.log(pushCounter + " - " push.lenght);
+            
     if(pushCounter === (push.length - 1)){
-        pushCounter = 0;
         shuffleArray(push);
+        pushCounter = 0;
     }    
     if(pullCounter === (pull.length - 1)){
-        pullCounter = 0;
         shuffleArray(pull);
+        pullCounter = 0;
     }   
     if(legCounter === (leg.length - 1)){
-        legCounter = 0;
-        shuffleArray(leg);
+        shuffleArray(leg)
+        legCounter = 0;;
     }
+    console.log(push);
 
     if(type === "push"){
         exercice = push[pushCounter];
-        pushCounter++;
-        console.log(push);
     }
     else if(type === "pull"){
         exercice = pull[pullCounter];
