@@ -467,14 +467,14 @@ function nextCycle(lift){
 function generateRandomAssist(type) {
 
     var exercice = "";
-	var arrayyy = shuffleArray(push);
 
     if(type === "push"){
 	if(pushCounter === push.length + 1){
 
-		console.log(push);
+		var arrayyy = shuffleArray(push);
+		console.log(arrayy);
 		
-		push = arrayyy;
+		shuffleArray(push);
 		
 		console.log(push);
 		console.log("--------------------------");
@@ -487,7 +487,7 @@ function generateRandomAssist(type) {
     else if(type === "pull"){
 		
 	if(pullCounter === pull.length + 1){
-		pull = shuffleArray(pull);
+		shuffleArray(pull);
 		pullCounter = 0;
 	}  
 		
@@ -497,7 +497,7 @@ function generateRandomAssist(type) {
     else if(type ="leg"){
 		
 	if(legCounter === leg.length + 1){
-		leg = shuffleArray(leg)
+		shuffleArray(leg);
         	legCounter = 0;
     	}
 		
@@ -509,17 +509,8 @@ function generateRandomAssist(type) {
 }
 
 function shuffleArray(array) {
-	
-		console.log(array);
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-	console.log(array);
-  return array;
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
