@@ -51,6 +51,10 @@ var push = ["Dips", "Pushups", "Incline DB Press", "DB OHP", "Pushdown"];
 var pull = ["Pullups", "Chinups", "Inverted Row", "Cable Row", "Face Pulls", "Band Pull-apart", "Lat Pulldowns", "Curls"];
 var leg = ["Back Raises", "Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", "Kettlebell Swings"];
 
+var pushCounter = 0;
+var pullCounter = 0;
+var legCounter = 0;
+
 function fillData() {
 
     //fill warmup
