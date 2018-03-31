@@ -54,10 +54,6 @@ var pull = ["Pullups", "Chinups", "Inverted Row", "Seated Cable Row", "Face Pull
 var leg = ["Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", 
             "Kettlebell Swings", "Machine Calf Raise"];
 
-shuffleArray(push);
-shuffleArray(pull);
-shuffleArray(leg);
-
 var pushCounter = 0;
 var pullCounter = 0;
 var legCounter = 0;
@@ -474,12 +470,11 @@ function generateRandomAssist(type) {
 
     if(type === "push"){
 	if(pushCounter === push.length + 1){
-		console.log("AVANT");
+		console.log("--------------------------");
 		console.log(push);
 		
 		shuffleArray(push);
 		
-		console.log("APRÈS");
 		console.log(push);
 		console.log("--------------------------");
 		pushCounter = 0;
@@ -512,16 +507,14 @@ function generateRandomAssist(type) {
     return exercice;
 }
 
-function shuffleArray(array) {
+function shuffleArray(arr) {
 	
-    var arr = array;
+    var size = arr.lenght - 1;
 	
-    for (var i = arr.length - 1; i > 0; i--) {
+    for (var i = size; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-	    console.log("HEYYY");
     }
-	array = arr;
 }
