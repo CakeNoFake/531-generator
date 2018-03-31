@@ -481,6 +481,7 @@ function generateRandomAssist(type) {
     if(type === "push"){
         exercice = push[pushCounter];
         pushCounter++;
+        console.log(push);
     }
     else if(type === "pull"){
         exercice = pull[pullCounter];
