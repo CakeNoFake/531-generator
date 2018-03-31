@@ -473,27 +473,24 @@ function generateRandomAssist(type) {
     var exercice = "";
 
     if(type === "push"){
-	    
-	console.log(pushCounter + " - " + parseInt(push.lenght));
-
-	if(pushCounter === (push.length - 1)){
+	if(pushCounter === push.length + 1){
 		console.log("AVANT");
 		console.log(push);
+		
 		shuffleArray(push);
+		
 		console.log("APRÈS");
 		console.log(push);
 		console.log("--------------------------");
 		pushCounter = 0;
 	}       
-	else{
-	console.log(push);}
 
         exercice = push[pushCounter];
         pushCounter++;
     }
     else if(type === "pull"){
 		
-	if(pullCounter === (pull.length - 1)){
+	if(pullCounter === pull.length + 1){
 		shuffleArray(pull);
 		pullCounter = 0;
 	}  
@@ -503,7 +500,7 @@ function generateRandomAssist(type) {
     }
     else if(type ="leg"){
 		
-	if(legCounter === (leg.length - 1)){
+	if(legCounter === leg.length + 1){
 		shuffleArray(leg)
         	legCounter = 0;
     	}
@@ -522,4 +519,5 @@ function shuffleArray(array) {
         array[i] = array[j];
         array[j] = temp;
     }
+	console.log("HEYYYYYYY");
 }
