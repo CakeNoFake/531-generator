@@ -467,14 +467,13 @@ function nextCycle(lift){
 function generateRandomAssist(type) {
 
     var exercice = "";
-	var arrayyy = ["SALUT"];
+	var arrayyy = shuffleArray(push);
 
     if(type === "push"){
 	if(pushCounter === push.length + 1){
 
 		console.log(push);
 		
-		push = shuffleArray(push);
 		push = arrayyy;
 		
 		console.log(push);
@@ -511,6 +510,7 @@ function generateRandomAssist(type) {
 
 function shuffleArray(array) {
 	
+		console.log(array);
   var currentIndex = array.length, temporaryValue, randomIndex;
 
   while (0 !== currentIndex) {
@@ -520,5 +520,6 @@ function shuffleArray(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
+	console.log(array);
   return array;
 }
