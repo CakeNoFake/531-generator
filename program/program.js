@@ -474,15 +474,19 @@ function generateRandomAssist(type) {
 
     if(type === "push"){
 	    
-	console.log(pushCounter + " - " + push.lenght);
+	console.log(pushCounter + " - " + parseInt(push.lenght));
 
 	if(pushCounter === (push.length - 1)){
-		console.log("AVANT" + push);
+		console.log("AVANT");
+		console.log(push);
 		shuffleArray(push);
-		console.log("APRÈS" + push);
+		console.log("APRÈS");
+		console.log(push);
+		console.log("--------------------------");
 		pushCounter = 0;
 	}       
-	console.log("--------------------------");
+	else{
+	console.log(push);}
 
         exercice = push[pushCounter];
         pushCounter++;
