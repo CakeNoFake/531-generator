@@ -469,16 +469,16 @@ function nextCycle(lift){
 function generateRandomAssist(type) {
 
     var exercice = "";
+    var pushTmp = push;
 
     if(type === "push"){
 	if(pushCounter === push.length + 1){
 		
-		console.log(push);
+		console.log(pushTmp);
 		
-		shuffleArray(push2);
-		push = push2;
+		shuffleArray(pushTmp);
 		
-		console.log(push);
+		console.log(pushTmp);
 		console.log("--------------------------");
 		pushCounter = 0;
 	}       
