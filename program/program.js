@@ -471,11 +471,11 @@ function generateRandomAssist(type) {
     if(type === "push"){
 	if(pushCounter === push.length + 1){
 		
-		console.log(push + "!");
+		console.log(push);
 		
     		push.sort(function(a, b){return 0.5 - Math.random()});
 		
-		console.log(push  + "!");
+		console.log(push);
 		console.log("--------------------------");
 		pushCounter = 0;
 	}       
