@@ -476,12 +476,7 @@ function generateRandomAssist(type) {
 		
 		console.log(pushTmp);
 		
-		    for (var i = pushTmp.length - 1; i > 0; i--) {
-			var j = Math.floor(Math.random() * (i + 1));
-			var temp = pushTmp[i];
-			pushTmp[i] = pushTmp[j];
-			pushTmp[j] = temp;
-		    }
+    		pushTmp.sort(function(a, b){return 0.5 - Math.random()});
 		
 		console.log(pushTmp);
 		console.log("--------------------------");
