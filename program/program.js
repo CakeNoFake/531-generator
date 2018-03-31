@@ -96,7 +96,7 @@ function fillData() {
 
 
     for(var i = 0; i < assistanceArr.length; i++){
-        document.getElementsByClassName("assistance")[i].innerHTML = "Super Set : <br> 5x15 - " + generateRandomAssist("push") + "<br> 5x15 - " +
+        document.getElementsByClassName("assistance")[i].innerHTML = "Super Set (optional) : <br> 5x15 - " + generateRandomAssist("push") + "<br> 5x15 - " +
         generateRandomAssist("pull") + "<br> 5x15 - " + generateRandomAssist("leg");
     }
 
