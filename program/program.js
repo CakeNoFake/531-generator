@@ -473,7 +473,7 @@ function generateRandomAssist(type) {
 
 		console.log(push);
 		
-		push = shuffleArray(push);
+		this.push = shuffleArray(this.push);
 		
 		console.log(push);
 		console.log("--------------------------");
