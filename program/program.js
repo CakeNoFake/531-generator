@@ -461,15 +461,40 @@ function generateRandomAssist(type) {
 
     var exercice = "";
 
+    if(pushCounter === push.length){
+        pushCounter = 0;
+        shuffleArray(push);
+    }    
+    if(pullCounter === pull.length){
+        pullCounter = 0;
+        shuffleArray(pull);
+    }   
+    if(legCounter === leg.length){
+        legCounter = 0;
+        shuffleArray(leg);
+    }
+
     if(type === "push"){
-        exercice = push[Math.floor((Math.random() * push.length))];
+        exercice = push[pushCounter];
+        pushCounter++;
     }
     else if(type === "pull"){
-        exercice = pull[Math.floor((Math.random() * pull.length))];
+        exercice = pull[pullCounter];
+        pullCounter++;
     }
     else if(type ="leg"){
-        exercice = leg[Math.floor((Math.random() * leg.length))];
+        exercice = leg[legCounter];
+        legCounter++;
     }
 
     return exercice;
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
