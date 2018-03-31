@@ -469,40 +469,39 @@ function generateRandomAssist(type) {
     var exercice = "";
 
     if(type === "push"){
-	if(pushCounter === push.length + 1){
-		
-		console.log(push);
-		
-    		push.sort(function(a, b){return 0.5 - Math.random()});
-		
-		console.log(push);
-		console.log("--------------------------");
+	if(pushCounter === push.length){
+    		shuffleArray(push);		
 		pushCounter = 0;
 	}       
-
         exercice = push[pushCounter];
         pushCounter++;
     }
     else if(type === "pull"){
 		
-	if(pullCounter === pull.length + 1){
-		//shuffleArray(pull);
+	if(pullCounter === pull.length){
+		shuffleArray(pull);
 		pullCounter = 0;
 	}  
-		
         exercice = pull[pullCounter];
         pullCounter++;
     }
     else if(type ="leg"){
 		
-	if(legCounter === leg.length + 1){
-		//shuffleArray(leg);
+	if(legCounter === leg.length){
+		shuffleArray(leg);
         	legCounter = 0;
-    	}
-		
+    	}	
         exercice = leg[legCounter];
         legCounter++;
     }
-
     return exercice;
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
