@@ -471,31 +471,37 @@ function nextCycle(lift){
 function generateRandomAssist(type) {
 
     var exercice = "";
-           
-    console.log(pushCounter + " - " push.lenght);
-            
-    if(pushCounter === (push.length - 1)){
-        shuffleArray(push);
-        pushCounter = 0;
-    }    
-    if(pullCounter === (pull.length - 1)){
-        shuffleArray(pull);
-        pullCounter = 0;
-    }   
-    if(legCounter === (leg.length - 1)){
-        shuffleArray(leg)
-        legCounter = 0;;
-    }
-    console.log(push);
 
     if(type === "push"){
+		 console.log(pushCounter + " - " + (push.lenght - 1));
+		
+		if(pushCounter === (push.length - 1)){
+			shuffleArray(push);
+			pushCounter = 0;
+		}       
+                
+		console.log(push);
+		
         exercice = push[pushCounter];
+        pushCounter++;
     }
     else if(type === "pull"){
+		
+		if(pullCounter === (pull.length - 1)){
+			shuffleArray(pull);
+			pullCounter = 0;
+		}  
+		
         exercice = pull[pullCounter];
         pullCounter++;
     }
     else if(type ="leg"){
+		
+	    if(legCounter === (leg.length - 1)){
+        shuffleArray(leg)
+        legCounter = 0;;
+    	}
+		
         exercice = leg[legCounter];
         legCounter++;
     }
