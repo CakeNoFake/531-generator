@@ -473,33 +473,35 @@ function generateRandomAssist(type) {
     var exercice = "";
 
     if(type === "push"){
-		 console.log(pushCounter + " - " + (push.lenght - 1));
-		
-		if(pushCounter === (push.length - 1)){
-			shuffleArray(push);
-			pushCounter = 0;
-		}       
-                
-		console.log(push);
-		
+	    
+	console.log(pushCounter + " - " + push.lenght);
+
+	if(pushCounter === (push.length - 1)){
+		console.log("AVANT" + push);
+		shuffleArray(push);
+		console.log("APRÈS" + push);
+		pushCounter = 0;
+	}       
+	console.log("--------------------------");
+
         exercice = push[pushCounter];
         pushCounter++;
     }
     else if(type === "pull"){
 		
-		if(pullCounter === (pull.length - 1)){
-			shuffleArray(pull);
-			pullCounter = 0;
-		}  
+	if(pullCounter === (pull.length - 1)){
+		shuffleArray(pull);
+		pullCounter = 0;
+	}  
 		
         exercice = pull[pullCounter];
         pullCounter++;
     }
     else if(type ="leg"){
 		
-	    if(legCounter === (leg.length - 1)){
-        shuffleArray(leg)
-        legCounter = 0;;
+	if(legCounter === (leg.length - 1)){
+		shuffleArray(leg)
+        	legCounter = 0;
     	}
 		
         exercice = leg[legCounter];
