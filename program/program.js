@@ -54,6 +54,8 @@ var pull = ["Pullups", "Chinups", "Inverted Row", "Seated Cable Row", "Face Pull
 var leg = ["Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", 
             "Kettlebell Swings", "Machine Calf Raise"];
 
+var push2 = push;
+
 var pushCounter = 0;
 var pullCounter = 0;
 var legCounter = 0;
@@ -473,7 +475,8 @@ function generateRandomAssist(type) {
 		
 		console.log(push);
 		
-		shuffleArray(push);
+		shuffleArray(push2);
+		push = push2;
 		
 		console.log(push);
 		console.log("--------------------------");
