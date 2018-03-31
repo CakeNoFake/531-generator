@@ -48,11 +48,11 @@ var counterBarbellRow = 0;
 
 // Assistance options
 var push = ["Dips", "Pushups", "Incline DB Press", "DB OHP", "Pushdown", "DB Side Raises", "Cross Cable Raise",
-            "DB Triceps Extension", "Close-grip Press", "END"];
+            "DB Triceps Extension", "Close-grip Press"];
 var pull = ["Pullups", "Chinups", "Inverted Row", "Seated Cable Row", "Face Pulls", "Lat Pulldowns", 
-            "BB Curls", "EZ-Bar Preacher Curl", "Wrist Curl", "Cable Curls", "Reverse Wrist Curl", "END"];
+            "BB Curls", "EZ-Bar Preacher Curl", "Wrist Curl", "Cable Curls", "Reverse Wrist Curl"];
 var leg = ["Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", 
-            "Kettlebell Swings", "Machine Calf Raise", "END"];
+            "Kettlebell Swings", "Machine Calf Raise"];
 
 shuffleArray(push);
 shuffleArray(pull);
