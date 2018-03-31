@@ -54,8 +54,6 @@ var pull = ["Pullups", "Chinups", "Inverted Row", "Seated Cable Row", "Face Pull
 var leg = ["Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", 
             "Kettlebell Swings", "Machine Calf Raise"];
 
-var push2 = push;
-
 var pushCounter = 0;
 var pullCounter = 0;
 var legCounter = 0;
@@ -469,16 +467,15 @@ function nextCycle(lift){
 function generateRandomAssist(type) {
 
     var exercice = "";
-    var pushTmp = push;
 
     if(type === "push"){
 	if(pushCounter === push.length + 1){
 		
-		console.log(pushTmp);
+		console.log(push + "!");
 		
-    		pushTmp.sort(function(a, b){return 0.5 - Math.random()});
+    		push.sort(function(a, b){return 0.5 - Math.random()});
 		
-		console.log(pushTmp);
+		console.log(push);
 		console.log("--------------------------");
 		pushCounter = 0;
 	}       
