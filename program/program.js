@@ -470,9 +470,8 @@ function generateRandomAssist(type) {
 
     if(type === "push"){
 	if(pushCounter === push.length + 1){
-
-		var arrayyy = shuffleArray(push);
-		console.log(arrayy);
+		
+		console.log(push);
 		
 		shuffleArray(push);
 		
