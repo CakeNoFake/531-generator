@@ -47,9 +47,16 @@ var cycleBBRow = 1;
 var counterBarbellRow = 0;
 
 // Assistance options
-var push = ["Dips", "Pushups", "Incline DB Press", "DB OHP", "Pushdown"];
-var pull = ["Pullups", "Chinups", "Inverted Row", "Cable Row", "Face Pulls", "Band Pull-apart", "Lat Pulldowns", "Curls"];
-var leg = ["Back Raises", "Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", "Kettlebell Swings"];
+var push = ["Dips", "Pushups", "Incline DB Press", "DB OHP", "Pushdown", "DB Side Raises", "Cross Cable Raise",
+            "DB Triceps Extension", "Close-grip Press", "END"];
+var pull = ["Pullups", "Chinups", "Inverted Row", "Seated Cable Row", "Face Pulls", "Lat Pulldowns", 
+            "BB Curls", "EZ-Bar Preacher Curl", "Wrist Curl", "Cable Curls", "Reverse Wrist Curl", "END"];
+var leg = ["Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", 
+            "Kettlebell Swings", "Machine Calf Raise", "END"];
+
+shuffleArray(push);
+shuffleArray(pull);
+shuffleArray(leg);
 
 var pushCounter = 0;
 var pullCounter = 0;
@@ -465,15 +472,15 @@ function generateRandomAssist(type) {
 
     var exercice = "";
 
-    if(pushCounter === push.length){
+    if(pushCounter === (push.length - 1)){
         pushCounter = 0;
         shuffleArray(push);
     }    
-    if(pullCounter === pull.length){
+    if(pullCounter === (pull.length - 1)){
         pullCounter = 0;
         shuffleArray(pull);
     }   
-    if(legCounter === leg.length){
+    if(legCounter === (leg.length - 1)){
         legCounter = 0;
         shuffleArray(leg);
     }
