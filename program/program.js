@@ -49,10 +49,9 @@ var counterBarbellRow = 0;
 // Assistance options
 var push = ["Dips", "DB OHP", "Pushdown", "Pushups", "Lateral Raises", "Triceps Extension", "Incline DB Press",
 	    "Cable Raise", "Close-grip Press"];
-var pull = ["Pullups", "Chinups", "Wrist Curl", "Lat Pulldowns", "BB Curls", "Reverse Wrist Curl", "Inverted Row", 
+var pull = ["Pullups", "Chinups", "Wrist Curl", "Lat Pulldowns", "BB Curls", "Inverted Row", 
 	    "Preacher Curl", "Seated Cable Row", "Cable Curls", "Face Pulls"];	
-var leg = ["Laying Leg Curl", "Lunges", "Step Ups", "Bulgarian Squats", "Kettlebell Snatches", 
-            "Kettlebell Swings", "Machine Calf Raise"];
+var leg = ["Laying Leg Curl", "Lunges", "Kettlebell Snatches", "Kettlebell Swings", "Machine Calf Raise", "Leg Push"];
 
 var pushCounter = 0;
 var pullCounter = 0;
@@ -64,7 +63,7 @@ function fillData() {
     var warmupArr = document.getElementsByClassName("warmup");
 
     for(var i = 0; i < warmupArr.length; i++){
-        document.getElementsByClassName("warmup")[i].innerHTML = "2min - <br>Treadmill" + "<br>" + "3x10 - <br>Box jumps";
+        document.getElementsByClassName("warmup")[i].innerHTML = "2min - <br>Treadmill" + "<br>" + "3x15 - <br>Box jumps";
     }    
 
     //fill Lifts
@@ -96,8 +95,8 @@ function fillData() {
 
 
     for(var i = 0; i < assistanceArr.length; i++){
-        document.getElementsByClassName("assistance")[i].innerHTML = "Super Set (optional) : <br> 5x15 - " + generateRandomAssist("push") + "<br> 5x15 - " +
-        generateRandomAssist("pull") + "<br> 5x15 - " + generateRandomAssist("leg");
+        document.getElementsByClassName("assistance")[i].innerHTML = "Super Set (optional) : <br> 4x15 - " + generateRandomAssist("push") + "<br> 4x15 - " +
+        generateRandomAssist("pull") + "<br> 4x15 - " + generateRandomAssist("leg");
     }
 
 }
