@@ -49,9 +49,9 @@ var counterBarbellRow = 0;
 // Assistance options
 var push = ["Dips", "DB OHP", "Pushdown", "Pushups", "Lateral Raises", "Triceps Extension", "Incline DB Press",
 	    "Cable Raise", "Close-grip Press"];
-var pull = ["Pullups", "Chinups", "Wrist Curl", "Lat Pulldowns", "BB Curls", "Inverted Row", 
-	    "Preacher Curl", "Seated Cable Row", "Cable Curls", "Face Pulls", "Reverse Curls"];	
-var leg = ["Laying Leg Curl", "Lunges", "Kettlebell Swings", "Machine Calf Raise", "Leg Push"];
+var pull = ["Pullups", "Chinups", "Hammer curls", "Lat Pulldowns", "BB Curls", "Inverted Row", 
+	    "Preacher Curl", "Seated Cable Row", "Cable Curls", "DB Bench Row", "Reverse Curls"];	
+var leg = ["Laying Leg Curl", "Lunges", "BB Front Squats", "Machine Calf Raise", "Leg Push"];
 
 var pushCounter = 0;
 var pullCounter = 0;
@@ -92,11 +92,25 @@ function fillData() {
 
     //fill assistance
     var assistanceArr = document.getElementsByClassName("assistance");
+	var assistanceCycle = 0;
 
 
     for(var i = 0; i < assistanceArr.length; i++){
-        document.getElementsByClassName("assistance")[i].innerHTML = "4x15 - " + generateRandomAssist("push") + "<br> 4x15 - " +
-        generateRandomAssist("pull") + "<br> 4x15 - " + generateRandomAssist("leg");
+		if(assistanceCycle === 0){
+        	document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
+        	generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
+			assistanceCycle++;
+			}
+		if(assistanceCycle === 1){
+        	document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
+        	generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
+			assistanceCycle++;
+			}
+		if(assistanceCycle === 2){
+        	document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
+        	generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
+			assistanceCycle = 0;
+			}
     }
 
 }
