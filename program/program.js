@@ -47,7 +47,7 @@ var cycleBBRow = 1;
 var counterBarbellRow = 0;
 
 // Assistance options
-var push = ["Dips", "DB OHP", "Pushdown", "Pushups", "Lateral Raises", "Triceps Extension", "Incline DB Press",
+var push = ["Dips", "Arnold Press", "Pushdown", "Pushups", "Lateral Raises", "Triceps Extension", "Incline DB Press",
 	    "Cable Raise", "Close-grip Press"];
 var pull = ["Pullups", "Chinups", "Hammer curls", "Lat Pulldowns", "BB Curls", "Inverted Row", 
 	    "Preacher Curl", "Seated Cable Row", "Cable Curls", "DB Bench Row", "Reverse Curls"];	
