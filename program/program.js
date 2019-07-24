@@ -92,23 +92,24 @@ function fillData() {
 
     //fill assistance
     var assistanceArr = document.getElementsByClassName("assistance");
-	var assistanceCycle = 0;
+    var assistanceCycle = 0;
 
 
     for(var i = 0; i < assistanceArr.length; i++){
+	    console.log(assistanceCycle);
 		if(assistanceCycle === 0){
-        	document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
-        	generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
+        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
+        	    generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
 			assistanceCycle++;
 			}
 		if(assistanceCycle === 1){
-        	document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
-        	generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
+        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
+        	    generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
 			assistanceCycle++;
 			}
 		if(assistanceCycle === 2){
-        	document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
-        	generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
+        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
+        	    generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
 			assistanceCycle = 0;
 			}
     }
