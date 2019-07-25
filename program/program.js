@@ -94,21 +94,20 @@ function fillData() {
     var assistanceArr = document.getElementsByClassName("assistance");
 	
 	
-    for(var i = 0; i < assistanceArr.length - 3; i+=3){
+    for(var i = 0; i < assistanceArr.length; i+=3){
 	    
 	    	console.log(assistanceArr.length);
 	    	console.log(i);
         	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
         	    generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
-		
-	        //if(i !== assistanceArr.lenght - 1){}
-        	    document.getElementsByClassName("assistance")[i+1].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
+		i++;
+        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
         	    generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
-
-        	    document.getElementsByClassName("assistance")[i+2].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
+		i++;
+        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
         	    generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
 
-	    if(i===3){break};
+	    if(i!==0){break};
     }
 
 }
