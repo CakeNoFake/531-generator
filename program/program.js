@@ -392,6 +392,7 @@ function round5(x){
     return Math.round(x/5)*5;
 }
 
+//Note: 1 cycle = 1.5 week
 function nextCycle(lift){
 
     if(lift === "bench"){
@@ -400,7 +401,7 @@ function nextCycle(lift){
             cycleBench = 0;
         }
         else{
-            Bench = parseInt(Bench) + 5;
+            Bench = parseInt(Bench) + 7.5;
         }        
         BenchWarmup = Bench * 0.25;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
@@ -412,7 +413,7 @@ function nextCycle(lift){
     }
     else if(lift === "squat"){
         if(cycleSquat === 5){
-            Squat  = parseInt(Squat) - 10;
+            Squat  = parseInt(Squat) - 7.5;
             cycleSquat = 0;
         }
         else{
@@ -429,7 +430,7 @@ function nextCycle(lift){
     }
     else if(lift === "deadlift"){
         if(cycleDeadlift === 5){
-            Deadlift  = parseInt(Deadlift) - 20;
+            Deadlift  = parseInt(Deadlift) - 10;
             cycleDeadlift = 0;
         }
         else{
@@ -446,11 +447,11 @@ function nextCycle(lift){
     }
     else if(lift === "overheadPress"){
         if(cycleOHP === 5){
-            OverheadPress  = parseInt(OverheadPress) - 5;
+            OverheadPress  = parseInt(OverheadPress) - 7.5;
             cycleOHP = 0;
         }
         else{
-            OverheadPress = parseInt(OverheadPress) + 5;
+            OverheadPress = parseInt(OverheadPress) + 7.5;
         }
     
         OverheadPressWarmup = OverheadPress * 0.25;
@@ -468,7 +469,7 @@ function nextCycle(lift){
             cycleBBRow = 0;
         }
         else{
-            BarbellRow = parseInt(BarbellRow) + 5;
+            BarbellRow = parseInt(BarbellRow) + 7.5;
         }
     
         BarbellRowWarmup = BarbellRow * 0.25;
