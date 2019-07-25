@@ -94,7 +94,7 @@ function fillData() {
     var assistanceArr = document.getElementsByClassName("assistance");
 	
 	
-    for(var i = 0; i < assistanceArr.length; i++){
+    for(var i = 0; i < assistanceArr.length; i+=3){
 	    
         	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
         	    generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
