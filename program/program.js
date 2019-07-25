@@ -96,6 +96,7 @@ function fillData() {
 	
     for(var i = 0; i < assistanceArr.length - 3; i+=3){
 	    
+	    	console.log(assistanceArr.length);
 	    	console.log(i);
         	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
         	    generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
@@ -107,6 +108,7 @@ function fillData() {
         	    document.getElementsByClassName("assistance")[i+2].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
         	    generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
 
+	    if(i===3){break};
     }
 
 }
