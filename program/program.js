@@ -57,6 +57,9 @@ var pushCounter = 0;
 var pullCounter = 0;
 var legCounter = 0;
 
+//?
+var assistanceCycle = 0;
+
 function fillData() {
 
     //fill warmup
@@ -92,8 +95,8 @@ function fillData() {
 
     //fill assistance
     var assistanceArr = document.getElementsByClassName("assistance");
-    var assistanceCycle = 0;
-
+	
+	
     for(var i = 0; i < assistanceArr.length; i++){
 	    
 	    console.log(assistanceCycle);
