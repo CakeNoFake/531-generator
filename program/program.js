@@ -57,6 +57,9 @@ var pushCounter = 0;
 var pullCounter = 0;
 var legCounter = 0;
 
+//?
+var assistanceCycle = 0;
+
 function fillData() {
 
     //fill warmup
@@ -92,23 +95,25 @@ function fillData() {
 
     //fill assistance
     var assistanceArr = document.getElementsByClassName("assistance");
-    var assistanceCycle = 0;
 
 
     for(var i = 0; i < assistanceArr.length; i++){
-	    console.log("test");
+	    
 	    console.log(assistanceCycle);
 		if(assistanceCycle === 0){
+			console.log("push");
         	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
         	    generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
 			assistanceCycle++;
 			}
 		if(assistanceCycle === 1){
+			console.log("pull");
         	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
         	    generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
 			assistanceCycle++;
 			}
 		if(assistanceCycle === 2){
+			console.log("legs");
         	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
         	    generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
 			assistanceCycle = 0;
