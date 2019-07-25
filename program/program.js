@@ -94,20 +94,23 @@ function fillData() {
     var assistanceArr = document.getElementsByClassName("assistance");
 	
 	
-    for(var i = 0; i < assistanceArr.length; i+=3){
+    for(var i = 0; i < assistanceArr.length-5; i+=5){
 	    
-	    	console.log(assistanceArr.length);
-	    	console.log(i);
-        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
-        	    generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
-		i++;
-        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
-        	    generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
-		i++;
-        	    document.getElementsByClassName("assistance")[i].innerHTML = "3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
-        	    generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
-
-	    if(i!==0){break};
+        	document.getElementsByClassName("assistance")[i].innerHTML = "PUSH<br> 3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
+        	generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
+		
+        	document.getElementsByClassName("assistance")[i+1].innerHTML = "PULL<br> 3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
+        	generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
+		
+        	document.getElementsByClassName("assistance")[i+2].innerHTML = "LEGS<br> 3x8-12 - " + generateRandomAssist("leg") + "<br> 3x8-12 - " +
+        	generateRandomAssist("leg") + "<br> 3x8-12 - " + generateRandomAssist("leg");
+	    	
+	    	document.getElementsByClassName("assistance")[i+3].innerHTML = "PUSH<br> 3x8-12 - " + generateRandomAssist("push") + "<br> 3x8-12 - " +
+        	generateRandomAssist("push") + "<br> 3x8-12 - " + generateRandomAssist("push");
+		
+        	document.getElementsByClassName("assistance")[i+4].innerHTML = "PULL<br> 3x8-12 - " + generateRandomAssist("pull") + "<br> 3x8-12 - " +
+        	generateRandomAssist("pull") + "<br> 3x8-12 - " + generateRandomAssist("pull");
+		
     }
 
 }
