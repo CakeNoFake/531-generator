@@ -396,7 +396,7 @@ function nextCycle(lift){
 
     if(lift === "bench"){
         if(cycleBench === 5){
-            Bench  = parseInt(Bench) - 10;
+            Bench  = parseInt(Bench) - 5;
             cycleBench = 0;
         }
         else{
@@ -412,7 +412,7 @@ function nextCycle(lift){
     }
     else if(lift === "squat"){
         if(cycleSquat === 5){
-            Squat  = parseInt(Squat) - 20;
+            Squat  = parseInt(Squat) - 10;
             cycleSquat = 0;
         }
         else{
@@ -446,7 +446,7 @@ function nextCycle(lift){
     }
     else if(lift === "overheadPress"){
         if(cycleOHP === 5){
-            OverheadPress  = parseInt(OverheadPress) - 10;
+            OverheadPress  = parseInt(OverheadPress) - 5;
             cycleOHP = 0;
         }
         else{
@@ -464,7 +464,7 @@ function nextCycle(lift){
     }
     else if(lift === "barbellRow"){
         if(cycleBBRow === 5){
-            BarbellRow  = parseInt(BarbellRow) - 10;
+            BarbellRow  = parseInt(BarbellRow) - 5;
             cycleBBRow = 0;
         }
         else{
