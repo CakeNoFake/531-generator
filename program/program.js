@@ -140,7 +140,7 @@ function fillLifts(lift){
             result += "1x5+ - ";
             result +=  round5(Bench555[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result +=  round5(Bench555[0]).toString() + " lb";
             counterBench++;
         }        
@@ -155,7 +155,7 @@ function fillLifts(lift){
             result += "1x3+ - ";
             result +=  round5(Bench333[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result +=  round5(Bench333[0]).toString() + " lb";
             counterBench++
         }      
@@ -170,7 +170,7 @@ function fillLifts(lift){
             result += "1x1+ - ";
             result +=  round5(Bench531[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result +=  round5(Bench531[0]).toString() + " lb";            
             nextCycle(lift);
         } 
@@ -192,7 +192,7 @@ function fillLifts(lift){
             result += "1x5+ - ";
             result +=  round5(Squat555[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result +=  round5(Squat555[0]).toString() + " lb";
             counterSquat++;
         }        
@@ -207,7 +207,7 @@ function fillLifts(lift){
             result += "1x3+ - ";
             result +=  round5(Squat333[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result +=  round5(Squat333[0]).toString() + " lb";
             counterSquat++
         }      
@@ -222,7 +222,7 @@ function fillLifts(lift){
             result += "1x1+ - ";
             result += round5(Squat531[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(Squat531[0]).toString() + " lb";            
             nextCycle(lift);
         }
@@ -244,7 +244,7 @@ function fillLifts(lift){
             result += "1x5+ - ";
             result += round5(Deadlift555[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(Deadlift555[0]).toString() + " lb";
             counterDeadlift++;
         }        
@@ -259,7 +259,7 @@ function fillLifts(lift){
             result += "1x3+ - ";
             result += round5(Deadlift333[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(Deadlift333[0]).toString() + " lb";
             counterDeadlift++
         }      
@@ -274,7 +274,7 @@ function fillLifts(lift){
             result += "1x1+ - ";
             result += round5(Deadlift531[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(Deadlift531[0]).toString() + " lb";            
             nextCycle(lift);
         }
@@ -296,7 +296,7 @@ function fillLifts(lift){
             result += "1x5+ - ";
             result += round5(OverheadPress555[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(OverheadPress555[0]).toString() + " lb";
             counterOverheadPress++;
         }        
@@ -311,7 +311,7 @@ function fillLifts(lift){
             result += "1x3+ - ";
             result += round5(OverheadPress333[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(OverheadPress333[0]).toString() + " lb";
             counterOverheadPress++
         }      
@@ -326,7 +326,7 @@ function fillLifts(lift){
             result += "1x1+ - ";
             result += round5(OverheadPress531[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(OverheadPress531[0]).toString() + " lb";            
             nextCycle(lift);
         }
@@ -348,7 +348,7 @@ function fillLifts(lift){
             result += "1x5+ - ";
             result += round5(BarbellRow555[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(BarbellRow555[0]).toString() + " lb";
             counterBarbellRow++;
         }        
@@ -363,7 +363,7 @@ function fillLifts(lift){
             result += "1x3+ - ";
             result += round5(BarbellRow333[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(BarbellRow333[0]).toString() + " lb";
             counterBarbellRow++
         }      
@@ -378,7 +378,7 @@ function fillLifts(lift){
             result += "1x1+ - ";
             result += round5(BarbellRow531[2]).toString() + " lb";
             result += "<br>";
-            result += "1x5   - ";
+            result += "1x5+   - ";
             result += round5(BarbellRow531[0]).toString() + " lb";            
             nextCycle(lift);
         }
