@@ -48,10 +48,10 @@ var counterBarbellRow = 0;
 
 // Assistance options
 var push = ["Dips", "Arnold Press", "Pushdown", "Pushups", "Lateral Raises", "Triceps Extension", "Incline DB Press",
-	    "Cable Raise", "Close-grip Press"];
+	    "Cable Raise", "Close-grip BB Press"];
 var pull = ["Pullups", "Chinups", "Hammer curls", "Lat Pulldowns", "BB Curls", "Inverted Row", 
 	    "Preacher Curl", "Seated Cable Row", "Cable Curls", "DB Bench Row", "Reverse Curls"];	
-var leg = ["Laying Leg Curl", "Lunges", "BB Front Squats", "Machine Calf Raise", "Leg Push"];
+var leg = ["Laying Leg Curl", "Lunges", "DB Squats", "Machine Calf Raise", "Leg Push"];
 
 var pushCounter = 0;
 var pullCounter = 0;
@@ -63,7 +63,7 @@ function fillData() {
     var warmupArr = document.getElementsByClassName("warmup");
 
     for(var i = 0; i < warmupArr.length; i++){
-        document.getElementsByClassName("warmup")[i].innerHTML = "2min - <br>Treadmill" + "<br>" + "2x15 - <br>Box jumps";
+        document.getElementsByClassName("warmup")[i].innerHTML = "2min - <br> HI Treadmill" + "<br>" + "2x15 - <br>Box jumps";
     }    
 
     //fill Lifts
@@ -401,7 +401,7 @@ function nextCycle(lift){
             cycleBench = 0;
         }
         else{
-            Bench = parseInt(Bench) + 7.5;
+            Bench = parseInt(Bench) + 10;
         }        
         BenchWarmup = Bench * 0.25;
         Bench555 = [Bench * 0.65, Bench * 0.75, Bench * 0.85];
@@ -413,11 +413,11 @@ function nextCycle(lift){
     }
     else if(lift === "squat"){
         if(cycleSquat === 5){
-            Squat  = parseInt(Squat) - 7.5;
+            Squat  = parseInt(Squat) - 10;
             cycleSquat = 0;
         }
         else{
-            Squat = parseInt(Squat) + 10;
+            Squat = parseInt(Squat) + 15;
         }
     
         SquatWarmup = Squat * 0.25;
@@ -430,11 +430,11 @@ function nextCycle(lift){
     }
     else if(lift === "deadlift"){
         if(cycleDeadlift === 5){
-            Deadlift  = parseInt(Deadlift) - 10;
+            Deadlift  = parseInt(Deadlift) - 7.5;
             cycleDeadlift = 0;
         }
         else{
-            Deadlift = parseInt(Deadlift) + 10;
+            Deadlift = parseInt(Deadlift) + 15;
         }
     
         DeadliftWarmup = Deadlift * 0.25;
@@ -447,7 +447,7 @@ function nextCycle(lift){
     }
     else if(lift === "overheadPress"){
         if(cycleOHP === 5){
-            OverheadPress  = parseInt(OverheadPress) - 7.5;
+            OverheadPress  = parseInt(OverheadPress) - 5;
             cycleOHP = 0;
         }
         else{
@@ -469,7 +469,7 @@ function nextCycle(lift){
             cycleBBRow = 0;
         }
         else{
-            BarbellRow = parseInt(BarbellRow) + 7.5;
+            BarbellRow = parseInt(BarbellRow) + 10;
         }
     
         BarbellRowWarmup = BarbellRow * 0.25;
