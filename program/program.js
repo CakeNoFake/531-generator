@@ -447,11 +447,11 @@ function nextCycle(lift){
     }
     else if(lift === "overheadPress"){
         if(cycleOHP === 5){
-            OverheadPress  = parseInt(OverheadPress) - 2.5;
+            OverheadPress  = parseInt(OverheadPress) - 5;
             cycleOHP = 0;
         }
         else{
-            OverheadPress = parseInt(OverheadPress) + 5;
+            OverheadPress = parseInt(OverheadPress) + 7.5;
         }
     
         OverheadPressWarmup = OverheadPress * 0.25;
